@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cognit Manager Dashboard</title>
+<link rel="stylesheet" href="/static/manager.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+```
+<!-- Sidebar -->
+<aside class="sidebar">
+
+    <div class="logo">
+        🧠 Cognit Manager
+    </div>
+
+    <div>
+    Users:
+    <span id="users">0</span>
+</div>
+
+<div>
+    Requests:
+    <span id="requests">0</span>
+</div>
+
+<div>
+    Errors:
+    <span id="errors">0</span>
+</div>
+
+    <div class="menu">
+
+        <div class="menu-item active">
+            📊 Dashboard
+        </div>
+
+        <div class="menu-item">
+            👥 Users
+        </div>
+
+        <div class="menu-item">
+            💎 Premium
+        </div>
+
+        <div class="menu-item">
+            📨 Alerts
+        </div>
+
+        <div class="menu-item">
+            🛡 Security
+        </div>
+
+        <div class="menu-item">
+            🤖 AI Models
+        </div>
+
+        <div class="menu-item">
+            ⚙ Settings
+        </div>
+
+    </div>
+
+</aside>
+
+<!-- Main -->
+<main class="main">
+
+    <!-- Top -->
+    <div class="topbar">
+
+        <h2>Cognit Infinity Manager Dashboard</h2>
+
+        <div class="status">
+            🟢 Server Online
+        </div>
+
+    </div>
+
+    <!-- Stats -->
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Users</h3>
+            <h1 id="users">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Premium Users</h3>
+            <h1 id="premium">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Total Requests</h3>
+            <h1 id="requests">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Errors</h3>
+            <h1 id="errors">0</h1>
+        </div>
+
+    </div>
+
+    <!-- API Status -->
+    <div class="panel">
+
+        <h3>API Status</h3>
+
+        <table>
+
+            <tr>
+                <th>Model</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>Gemini Flash</td>
+                <td id="modelStatus">Online</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Logs -->
+    <div class="panel">
+
+        <h3>Recent Logs</h3>
+
+        <div id="logs">
+            Waiting for logs...
+        </div>
+
+    </div>
+
+</main>
+```
+
+</div>
+
+<script src="/static/manager.js"></script>
+
+</body>
+</html>

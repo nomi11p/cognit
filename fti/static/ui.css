@@ -1,0 +1,401 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui,Arial,sans-serif;
+}
+
+body{
+    background:#0b1220;
+    color:white;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* =========================
+   APP
+========================= */
+
+.app{
+    display:flex;
+    height:100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+    width:280px;
+    background:#111827;
+    border-right:1px solid #1f2937;
+    display:flex;
+    flex-direction:column;
+    padding:15px;
+    overflow-y:auto;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#60a5fa;
+    margin-bottom:20px;
+}
+
+.new-chat{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    margin-bottom:15px;
+    transition:.2s;
+}
+
+.new-chat:hover{
+    background:#1d4ed8;
+}
+
+.section{
+    margin-top:18px;
+    margin-bottom:8px;
+    color:#94a3b8;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.panel-btn,
+.item{
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    color:#e2e8f0;
+    margin-bottom:6px;
+    transition:.2s;
+}
+
+.panel-btn:hover,
+.item:hover{
+    background:#1e293b;
+}
+
+.item.active{
+    background:#2563eb;
+}
+
+.premium{
+    border:1px solid gold;
+}
+
+.donate{
+    border:1px solid #22c55e;
+}
+
+.footer{
+    margin-top:auto;
+    border-top:1px solid #1f2937;
+    padding-top:15px;
+    font-size:12px;
+    color:#94a3b8;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+    height:70px;
+    background:#111827;
+    border-bottom:1px solid #1f2937;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+.top-title{
+    font-size:22px;
+    font-weight:700;
+}
+
+.top-actions{
+    display:flex;
+    gap:10px;
+}
+
+.top-actions button{
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#1e293b;
+    color:white;
+    transition:.2s;
+}
+
+.top-actions button:hover{
+    background:#334155;
+}
+
+/* =========================
+   PANELS
+========================= */
+
+.panel-page{
+    display:none;
+    padding:20px;
+    background:#0f172a;
+    border-bottom:1px solid #1f2937;
+}
+
+.panel-page.active-panel{
+    display:block;
+}
+
+.panel-page h2{
+    margin-bottom:15px;
+}
+
+.panel-page p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+/* =========================
+   ACCOUNT PANEL
+========================= */
+
+#accountInfo{
+    background:#111827;
+    padding:15px;
+    border-radius:12px;
+    margin-top:10px;
+}
+
+/* =========================
+   SETTINGS PANEL
+========================= */
+
+#settingsPanel label{
+    display:block;
+    margin-top:10px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+#createProjectBtn{
+    padding:12px 18px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+#projectsList{
+    margin-top:15px;
+}
+
+.project-card{
+    background:#111827;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:10px;
+}
+
+/* =========================
+   LIBRARY
+========================= */
+
+.library-card{
+    background:#111827;
+    padding:15px;
+    border-radius:12px;
+    margin-top:10px;
+}
+
+/* =========================
+   PREMIUM
+========================= */
+
+.premium-card{
+    background:linear-gradient(
+        135deg,
+        #f59e0b,
+        #eab308
+    );
+    color:black;
+    padding:20px;
+    border-radius:15px;
+    font-weight:600;
+    margin-top:10px;
+}
+
+/* =========================
+   CHAT
+========================= */
+
+.chat{
+    flex:1;
+    overflow-y:auto;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.msg{
+    max-width:75%;
+    padding:12px 15px;
+    border-radius:14px;
+    word-wrap:break-word;
+    line-height:1.5;
+}
+
+.user{
+    align-self:flex-end;
+    background:#2563eb;
+}
+
+.bot{
+    align-self:flex-start;
+    background:#1e293b;
+}
+
+.system{
+    align-self:center;
+    background:#374151;
+    font-size:13px;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.inputbar{
+    display:flex;
+    padding:15px;
+    background:#111827;
+    border-top:1px solid #1f2937;
+}
+
+.inputbar input{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+    outline:none;
+}
+
+.inputbar button{
+    margin-left:10px;
+    padding:14px 20px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.inputbar button:hover{
+    background:#1d4ed8;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#334155;
+    border-radius:10px;
+}
+
+#historyList{
+    margin-top:15px;
+}
+
+.history-item{
+    background:#111827;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+.history-item:hover{
+    background:#1e293b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .sidebar{
+        width:75px;
+        padding:10px;
+    }
+
+    .logo{
+        font-size:12px;
+        text-align:center;
+    }
+
+    .section{
+        display:none;
+    }
+
+    .panel-btn,
+    .item{
+        text-align:center;
+        font-size:11px;
+        padding:10px 5px;
+    }
+
+    .footer{
+        display:none;
+    }
+
+    .msg{
+        max-width:90%;
+    }
+
+    .top-title{
+        font-size:16px;
+    }
+
+    .top-actions button{
+        padding:8px 10px;
+        font-size:12px;
+    }
+}

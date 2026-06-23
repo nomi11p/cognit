@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cognit Infinity Login</title>
+
+<link rel="stylesheet" href="/static/login.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <div class="logo">
+            🧠 Cognit Infinity
+        </div>
+
+        <h2>Welcome Back</h2>
+
+        <p class="subtitle">
+            Sign in to sync your account across devices.
+        </p>
+
+       
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="divider">
+            OR
+        </div>
+
+        
+
+        <a href="/login/google" class="oauth-btn google">
+            🔵 Continue with Google
+        </a>
+
+<a href="/login/github" class="oauth-btn github">
+             Continue with Github
+        </a>
+
+ <a href="/login/yahoo" class="oauth-btn yahoo">
+             Continue with Yahoo
+        </a>
+      <button
+    type="text"
+    class="oauth-btn apple"
+    onclick="loginApple()">
+      Apple Login
+      </button>
+<button class="oauth-btn" onclick="continueGuest()">
+    Continue with Guest
+</button>
+            <div class="footer-text">
+            By continuing you agree to Cognit Infinity Terms.
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/login.js"></script>
+
+</body>
+</html>
+ 

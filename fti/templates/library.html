@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognit Library</title>
+
+    <link rel="stylesheet" href="/static/library.css">
+</head>
+<body>
+
+<div class="library-container">
+
+    <!-- HEADER -->
+
+    <header class="library-header">
+
+        <div class="logo">
+            📚 Cognit Library
+        </div>
+
+        <div class="header-buttons">
+            <a href="/" class="back-btn">
+                ← Back to Cognit
+            </a>
+        </div>
+
+    </header>
+
+    <!-- SEARCH -->
+
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search books, notes, chats..."
+        >
+
+        <button id="searchBtn">
+            🔍 Search
+        </button>
+
+    </section>
+
+    <!-- CATEGORIES -->
+
+    <section class="categories">
+
+        <div class="category-card" id="ebooksBtn">
+
+            <h3>📘 E-Books</h3>
+
+            <p>
+                Read books available in the Cognit Library.
+            </p>
+
+        </div>
+
+        <div class="category-card" id="notesBtn">
+
+            <h3>📄 Notes</h3>
+
+            <p>
+                Access study notes and documents.
+            </p>
+
+        </div>
+
+        <div class="category-card" id="savedChatsBtn">
+
+            <h3>💾 Saved Chats</h3>
+
+            <p>
+                View your saved conversations.
+            </p>
+
+        </div>
+
+        <div class="category-card" id="downloadsBtn">
+
+            <h3>⬇ Downloads</h3>
+
+            <p>
+                Manage downloaded content.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- COMING SOON -->
+
+    <section class="coming-soon-section">
+
+        <h2>
+            🚀 Coming Soon
+        </h2>
+
+        <div class="coming-grid">
+
+            <div class="coming-card">
+
+                <h3>🛒 Online Shop</h3>
+
+                <p>
+                    Buy books, templates, prompts and AI resources.
+                </p>
+
+                <button disabled>
+                    Coming Soon
+                </button>
+
+            </div>
+
+            <div class="coming-card">
+
+                <h3>🎓 Courses</h3>
+
+                <p>
+                    Learn AI, coding and more with premium courses.
+                </p>
+
+                <button disabled>
+                    Coming Soon
+                </button>
+
+            </div>
+
+            <div class="coming-card">
+
+                <h3>🤖 AI Tools</h3>
+
+                <p>
+                    Access advanced Cognit tools and utilities.
+                </p>
+
+                <button disabled>
+                    Coming Soon
+                </button>
+
+            </div>
+
+            <div class="coming-card">
+
+                <h3>🎨 Asset Store</h3>
+
+                <p>
+                    Download icons, templates and design assets.
+                </p>
+
+                <button disabled>
+                    Coming Soon
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENT AREA -->
+
+    <section class="content-section">
+
+        <h2>
+            Library Content
+        </h2>
+
+        <div id="libraryContent">
+
+            <div class="empty-state">
+
+                <h3>
+                    📚 No Content Yet
+                </h3>
+
+                <p>
+                    Books, notes and saved chats will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="/static/library.js"></script>
+
+</body>
+</html>

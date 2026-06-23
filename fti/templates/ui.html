@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognit Infinity</title>
+
+    <link rel="stylesheet" href="/static/ui.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🧠 Cognit Infinity
+        </div>
+
+        <button class="new-chat" id="newchatBtn">
+            + New Chat
+        </button>
+
+        <div class="section">WORKSPACE</div>
+
+        <div class="panel-btn" id="historylist">💬 Chats</div>
+        
+        <div class="panel-btn" id="libraryBtn">
+    📚 Library
+</div>
+        <div class="panel-btn" id="voiceBtn">🎤 Voice</div>
+
+        <div class="section">TOOLS</div>
+
+        <div class="panel-btn" id="browserBtn">🌐 Browser</div>
+        <div class="panel-btn" id="researchBtn">🔬 Research</div>
+        <div class="panel-btn" id="codingBtn">💻 Coding</div>
+
+        <div class="section">ACCOUNT</div>
+
+        <div class="panel-btn" id="accountBtn">👤 Account</div>
+        <div class="panel-btn" id="syncBtn">🔄 Sync</div>
+        <div class="panel-btn" id="settingsBtn">⚙ Settings</div>
+        <div class="panel-btn" id="teamBtn">👥 Team</div>
+
+        <div class="section">PREMIUM</div>
+
+        <div class="panel-btn premium" id="premiumBtn">
+            ⭐ Premium
+        </div>
+
+        <div class="panel-btn" id="billingBtn">
+            💳 Billing
+        </div>
+
+        <div class="panel-btn donate" id="donateBtn">
+            ❤️ Donate
+        </div>
+
+        <div class="section">MOODS</div>
+
+        <div class="item active" onclick="setMood('normal')">Normal</div>
+        <div class="item" onclick="setMood('study')">Study</div>
+        <div class="item" onclick="setMood('coding')">Coding</div>
+        <div class="item" onclick="setMood('creative')">Creative</div>
+        <div class="item" onclick="setMood('business')">Business</div>
+        <div class="item" onclick="setMood('research')">Research</div>
+
+        <div class="footer">
+            <small>
+                Conversations are stored locally on your device unless Sync is enabled.
+            </small>
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="top-title">
+                Cognit AI
+            </div>
+
+            <div class="top-actions">
+
+                
+                    
+        
+
+            </div>
+
+        </div>
+
+        <!-- HISTORY PANEL -->
+
+        <div class="panel-page" id="historyPanel">
+
+            <h2>Chat History</h2>
+
+            <div id="historyList"></div>
+
+        </div>
+
+        <!-- ACCOUNT PANEL -->
+
+        <div class="panel-page" id="accountPanel">
+
+            <h2>Account</h2>
+
+            <div id="accountInfo">
+                Loading account...
+            </div>
+
+        </div>
+
+        <!-- SETTINGS PANEL -->
+
+        <div class="panel-page" id="settingsPanel">
+
+            <h2>Settings</h2>
+
+            <label>
+                <input type="checkbox" id="memory">
+                Enable Memory
+            </label>
+
+            <br><br>
+
+            <label>
+                <input type="checkbox" id="consent">
+                Allow Local Storage
+            </label>
+
+        </div>
+
+        <!-- TEAM PANEL -->
+<div class="panel-page" id="teamPanel">
+
+    <h2>Team</h2>
+
+    <div class="team-member">
+        <strong>Founder:</strong> Add Name
+    </div>
+
+    <div class="team-member">
+        <strong>Frontend:</strong> Vaidik Bhoi
+    </div>
+
+    <div class="team-member">
+        <strong>Backend:</strong> Add Name
+    </div>
+
+    <div class="team-member">
+        <strong>Equipment Manager:</strong> Shashank Bawne
+    </div>
+
+</div>
+
+        <!-- LIBRARY PANEL -->
+
+        <div class="panel-page" id="libraryPanel">
+
+            <h2>Library</h2>
+
+            <p>Browse, rent and buy e-books.</p>
+
+            <div id="ebookContainer">
+
+            </div>
+
+        </div>
+
+        <!-- PREMIUM PANEL -->
+
+        <div class="panel-page" id="premiumPanel">
+
+            <h2>Premium</h2>
+
+            <p>
+                Unlock advanced AI features.
+            </p>
+
+        </div>
+
+        <!-- CHAT AREA -->
+
+        <div id="chat" class="chat">
+
+        </div>
+
+        <!-- INPUT BAR -->
+
+        <div class="inputbar">
+
+            <input
+                id="input"
+                type="text"
+                placeholder="Ask Cognit anything..."
+            >
+
+            <button onclick="send()">
+                Send
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="/static/ui.js"></script>
+
+</body>
+</html>
+
