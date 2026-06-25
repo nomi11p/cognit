@@ -9,71 +9,13 @@ register_api()
 # FTI API SYSTEM
 # ==========================
 
-API_KEYS = [
-  
-    
-     "AIzaSyAQ9fg5AYkWSp9j4iVivmhHV28o5awQQbc",
-    #  "AIzaSyB2esPAWxN-E-PxWUogL9ID-AnJYLTA8H0",
-    #  "AIzaSyBzww2X8ZfQ6ZHM3JNyswhhIH-YhKfSybU",
-    #  "AIzaSyAbKCMKZMpW8CAiDye5GiCyAUUQ4rqkvFE",
-    #  "AIzaSyBlGQNq5X8wM3QXT78F47B3Da5izsGY6Hk",
-    #  "AIzaSyBmLsLmLqf3-fK742Smh7rEjLBhT1dPUwA",
-    #  "AIzaSyCiCy5LiFFCfOWyc9kzB2cC4CnYTR0zJ28",
-    #  "AIzaSyA3rNI6wPMKpGFmi4TbyY9FyTWh_ivP8ig",
-    #  "AQ.Ab8RN6Ig0SiUgBK3jv1lzsn-0PjKIgDTe_flnna_aRpZYIdygQ",
-    #  "AQ.Ab8RN6LIddH8BO0qMFr-nYTiLuVybUrQDiuTopr8F96HE8VNsg",
-    #  "AQ.Ab8RN6I76sThUtzNtl6LZIrPSunwnezqLvhdbCX3GLRSsGJqMg",
-    #  "AQ.Ab8RN6JILYcM9dS6r4_hQzmq4it5LSqte-LuzbguBzgMU_8vFg",
-    # #  "jj",
-    # #  "kk",
-    # #  "kk",
-    # #  "ll",
-    # #  "hjj",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "jj",
-    # #  "kk",
-    # #  "kk",
-    # #  "ll",
-    # #  "hjj",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    # #  "dd",
-    #  "AQ.Ab8RN6Kri7Oa7A8DRDAX-pd05x-S_D_Wv3l5WIkc6ec8m2ucxg",
-    #  "AQ.Ab8RN6Kb6hf-H6PRWPQFEOlQXmJ91af3nNLNUG7fJietWGYPjw",
-    #  "AQ.Ab8RN6KVgMh5y9tG201SDyEByUojtCYTci6mzF5o2x5Jqzskuw",
-    #  "AQ.Ab8RN6LIddH8BO0qMFr-nYTiLuVybUrQDiuTopr8F96HE8VNsg",
-    #  "AQ.Ab8RN6I76sThUtzNtl6LZIrPSunwnezqLvhdbCX3GLRSsGJqMg",
-    #  "AIzaSyDDZFXjbuWGh1X6fjklz5juQUk4Lt3yF04",
-    #  "AIzaSyBP5naDgJqTssfG7ycCWThYLsABRHPwAQ0",
-    #  "AIzaSyBdCLqRbUeKkwvplZcNI2cUDJdfu6vRBK4",
-    #  "AIzaSyA8VrrvdNM_iOaQwvgfGo_DUptr_dS-ATY",
-    #  "AIzaSyBAJu2mEGJDLCkhHNamOEOSZzsUuPIrFXg",
-    #  "AIzaSyAQj6qyzrzry9jYaYpg2cmn7bcS6GBadz4",
-    #  "AIzaSyB2esPAWxN-E-PxWUogL9ID-AnJYLTA8H0",
-     
-    
-]
+# Load API keys from environment variable to avoid committing secrets to source control.
+# Set FTI_API_KEYS as a comma-separated list of keys (e.g. "key1,key2") or leave empty.
+API_KEYS = [k.strip() for k in os.environ.get("FTI_API_KEYS", "").split(",") if k.strip()]
 
 # Remove empty keys
 API_KEYS = [key for key in API_KEYS if key]
 print("API KEYS FOUND:", len(API_KEYS))
-print(API_KEYS)
 MODEL_NAME = "gemini-2.5-flash-lite"
 
 current_key_index = 0
@@ -212,4 +154,3 @@ def test_api():
         print("TEST ERROR:", e)
 
         return False
-
